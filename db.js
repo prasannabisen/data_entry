@@ -1,5 +1,5 @@
 const Sequelize=require('sequelize')
-const {app}=require('./server~')
+const {app}=require('./server')
 
 const sequelize=new Sequelize({
     dialect:'sqlite',
@@ -8,7 +8,7 @@ const sequelize=new Sequelize({
 
 const db=sequelize.define('info',{
     idNO:{
-        type:Sequelize.INTEGER
+        type:Sequelize.INTEGER,
     },
     name:{
         type:Sequelize.STRING
