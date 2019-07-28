@@ -8,6 +8,9 @@ app.get('/',(req,res)=>{
     res.render('index')
 })
 
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 app.post('/',(req,res)=>{
     db.create({
         idNO:req.body.sno,
