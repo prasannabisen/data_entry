@@ -16,13 +16,9 @@ const db=sequelize.define('info',{
     info:{
         type:Sequelize.STRING
     },
-    form:{
+    from:{
         type:Sequelize.STRING
     }
 })
 
 module.exports={sequelize,db}
-
-db.sync().then(()=>{
-    app.listen(3000)
-})
