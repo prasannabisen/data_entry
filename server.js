@@ -18,7 +18,7 @@ app.post('/',(req,res)=>{
         info:req.body.info,
         from:req.body.from
     }).then(()=>{
-        console.log("added")
+        res.redirect('https://www.google.com')
     })
 })
 
