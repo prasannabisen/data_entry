@@ -18,8 +18,12 @@ app.post('/',(req,res)=>{
         info:req.body.info,
         from:req.body.from
     }).then(()=>{
-        res.redirect('https://www.google.com')
+        res.redirect('localhost:3000/home')
     })
+})
+
+app.get('/home',(req,res)=>{
+    res.send(300)
 })
 
 module.exports={app}
