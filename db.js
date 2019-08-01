@@ -6,7 +6,7 @@ const sequelize=new Sequelize({
     storage:'info.db'
 })
 
-const db=sequelize.define('info',{
+const db=sequelize.define('detail',{
     idNO:{
         type:Sequelize.INTEGER,
     },

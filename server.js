@@ -18,12 +18,22 @@ app.post('/',(req,res)=>{
         info:req.body.info,
         from:req.body.from
     }).then(()=>{
-        res.redirect('localhost:3000/home')
+        res.redirect('/home')
     })
 })
 
 app.get('/home',(req,res)=>{
     res.send(300)
+})
+
+app.get('/read',(req,res)=>{
+    db.findAll({where:{idNO:3}})
+    .then((det)=>{
+        res.send(det);
+    })
+    .catch(err=>{
+        console.log(err);
+    })
 })
 
 module.exports={app}
